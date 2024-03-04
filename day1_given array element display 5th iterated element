@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    printf("reg no=192373023\n");
+    if (n >= 5) {
+        printf("5th iterated element: %d\n", arr[4]);
+    } else {
+        printf("Array size is less than 5\n");
+    }
+    
+    return 0;
+}
