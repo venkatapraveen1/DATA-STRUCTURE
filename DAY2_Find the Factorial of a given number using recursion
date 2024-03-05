@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+unsigned long long factorial(unsigned int n);
+
+int main() {
+    unsigned int number;
+    printf("reg.no:192373023\n");
+    printf("Enter a non-negative integer: ");
+    scanf("%u", &number);
+    printf("Factorial of %u = %llu", number, factorial(number));
+    return 0;
+}
+
+unsigned long long factorial(unsigned int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
