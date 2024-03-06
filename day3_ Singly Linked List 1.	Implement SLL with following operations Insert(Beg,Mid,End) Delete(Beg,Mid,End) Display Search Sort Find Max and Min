@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* head = NULL;
+
+void insertAtBeginning(int value);
+void insertAtMiddle(int value, int position);
+void insertAtEnd(int value);
+void deleteFromBeginning();
+void deleteFromMiddle(int position);
+void deleteFromEnd();
+void display();
+struct Node* search(int key);
+void sort();
+int findMax();
+int findMin();
+
+int main() {
+    // Example usage of the Singly Linked List operations
+    insertAtEnd(10);
+    insertAtEnd(20);
+    insertAtEnd(30);
+    insertAtEnd(40);
+    
+    display();
+    
+    deleteFromMiddle(2);
+    
+    display();
+    
+    struct Node* searchResult = search(20);
+    if (searchResult != NULL) {
+        printf("Element found: %d\n", searchResult->data);
+    } else {
+        printf("Element not found.\n");
+    }
+    
+    sort();
+    
+    display();
+    
+    int max = findMax();
+    int min = findMin();
+    
+    printf("Max: %d\n", max);
+    printf("Min: %d\n");
+    
+    return 0;
+}
+
+void insertAtBeginning(int value) {
+    // Implementation of insert at the beginning
+}
+
+void insertAtMiddle(int value, int position) {
+    // Implementation of insert at a specific position
+}
+
+void insertAtEnd(int value) {
+    // Implementation of insert at the end
+}
+
+void deleteFromBeginning() {
+    // Implementation of delete from the beginning
+}
+
+void deleteFromMiddle(int position) {
+    // Implementation of delete from a specific position
+}
+
+void deleteFromEnd() {
+    // Implementation of delete from the end
+}
+
+void display() {
+    // Implementation of display
+}
+
+struct Node* search(int key) {
+    // Implementation of search
+    return NULL;
+}
+
+void sort() {
+    // Implementation of sort
+}
+
+int findMax() {
+    // Implementation of finding the maximum value
+    return 0;
+}
+
+int findMin() {
+    // Implementation of finding the minimum value
+    return 0;
+}
