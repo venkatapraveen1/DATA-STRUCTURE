@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Node structure
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Function to count nodes in a linked list
+int countNodes(struct Node* head) {
+    int count = 0;
+    struct Node* current = head;
+
+    while (current != NULL) {
+        count++;
+        current = current->next;
+    }
+
+    return count;
+}
+
+// Main function
+int main() {
+    printf("reg_no:192373023\n");
+    // Create a linked list
+    struct Node* head = NULL;
+    struct Node* second = NULL;
+    struct Node* third = NULL;
+
+    // Allocate memory for nodes
+    head = (struct Node*)malloc(sizeof(struct Node));
+    second = (struct Node*)malloc(sizeof(struct Node));
+    third = (struct Node*)malloc(sizeof(struct Node));
+
+    // Assign data values and link nodes
+    head->data = 1;
+    head->next = second;
+
+    second->data = 2;
+    second->next = third;
+
+    third->data = 3;
+    third->next = NULL;
+
+    // Count nodes in the linked list
+    int nodeCount = countNodes(head);
+
+    // Print the number of nodes
+    printf("Number of nodes in the linked list: %d\n", nodeCount);
+
+    // Free memory
+    free(head);
+    free(second);
+    free(third);
+
+    return 0;
+}
